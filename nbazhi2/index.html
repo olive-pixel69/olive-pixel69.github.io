@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nba直播吧在线观看免费观看-NBA直播免费在线观看_篮球比赛实时比分与赛程</title>
+<meta name="description" content="nba直播吧在线观看免费观看：提供NBA常规赛、季后赛与焦点战的免费在线观看入口，附带实时比分、赛程安排与球队近况要点，方便球迷按时间找到想看的比赛。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23e8641c'/%3E%3Cpath d='M16 1v30M1 16h30' stroke='%23fff' stroke-width='1.6'/%3E%3Cpath d='M5 5c6 5 6 17 0 22M27 5c-6 5-6 17 0 22' stroke='%23fff' stroke-width='1.6' fill='none'/%3E%3C/svg%3E">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0e1117;--bg2:#151a23;--card:#1b2230;--line:#2a3344;
+--txt:#e9edf4;--sub:#9aa6b8;--accent:#e8641c;--accent2:#ffb020;--blue:#3d7bff;
+}
+html{scroll-behavior:smooth}
+body{
+background:var(--bg);color:var(--txt);
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+/* header */
+header{
+position:sticky;top:0;z-index:50;
+background:rgba(14,17,23,.92);backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;gap:28px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;letter-spacing:.2px;flex-shrink:0}
+.logo svg{width:30px;height:30px;flex-shrink:0}
+.logo span{color:var(--txt);white-space:nowrap}
+.navlinks{display:flex;gap:22px;font-size:14px;color:var(--sub);margin-left:auto}
+.navlinks a:hover{color:var(--accent2)}
+.navcta{
+font-size:14px;font-weight:600;color:#fff;background:linear-gradient(135deg,var(--accent),#c9410a);
+padding:8px 18px;border-radius:999px;white-space:nowrap;
+}
+/* hero */
+.hero{
+position:relative;overflow:hidden;
+background:
+radial-gradient(900px 420px at 85% -10%,rgba(232,100,28,.28),transparent 65%),
+radial-gradient(700px 380px at 5% 110%,rgba(61,123,255,.20),transparent 65%),
+var(--bg2);
+border-bottom:1px solid var(--line);
+}
+.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;padding:64px 0 60px}
+.tag{
+display:inline-flex;align-items:center;gap:8px;
+font-size:12.5px;color:var(--accent2);border:1px solid rgba(255,176,32,.35);
+background:rgba(255,176,32,.08);padding:5px 12px;border-radius:999px;margin-bottom:20px;
+}
+.tag i{width:7px;height:7px;border-radius:50%;background:var(--accent2);display:inline-block;animation:blink 1.6s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+h1{font-size:clamp(26px,4vw,42px);line-height:1.28;font-weight:800;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--accent)}
+.hero p{margin-top:18px;color:var(--sub);font-size:15.5px;max-width:520px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.btn{
+display:inline-flex;align-items:center;gap:8px;
+padding:13px 26px;border-radius:10px;font-size:15px;font-weight:600;
+transition:.2s;
+}
+.btn-main{background:linear-gradient(135deg,var(--accent),#c9410a);color:#fff;box-shadow:0 8px 24px -8px rgba(232,100,28,.7)}
+.btn-main:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);color:var(--txt);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--accent2);color:var(--accent2)}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.hero-visual svg{width:100%;max-width:360px;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
+/* score strip */
+.strip{background:var(--bg2);border-bottom:1px solid var(--line);overflow-x:auto}
+.strip-in{display:flex;gap:14px;padding:16px 0;min-width:max-content}
+.scorechip{
+background:var(--card);border:1px solid var(--line);border-radius:10px;
+padding:10px 16px;min-width:210px;font-size:13px;
+}
+.scorechip .teams{display:flex;justify-content:space-between;font-weight:600;font-size:13.5px;margin-bottom:2px}
+.scorechip .meta{color:var(--sub);font-size:11.5px;display:flex;justify-content:space-between}
+.scorechip .meta b{color:var(--accent2);font-weight:600}
+/* sections */
+section{padding:64px 0}
+.sec-head{margin-bottom:34px}
+.sec-kicker{font-size:12.5px;letter-spacing:2px;color:var(--accent);font-weight:700;text-transform:uppercase}
+.sec-head h2{font-size:clamp(21px,2.6vw,28px);font-weight:800;margin-top:8px}
+.sec-head p{color:var(--sub);font-size:14.5px;margin-top:10px;max-width:640px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{
+background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:24px;transition:.25s;
+}
+.card:hover{border-color:rgba(232,100,28,.55);transform:translateY(-3px)}
+.card .ico{
+width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+background:rgba(232,100,28,.14);margin-bottom:16px;
+}
+.card .ico svg{width:21px;height:21px;stroke:var(--accent);fill:none;stroke-width:1.8}
+.card h3{font-size:16.5px;font-weight:700;margin-bottom:8px}
+.card p{font-size:14px;color:var(--sub);line-height:1.7}
+.card .more{display:inline-block;margin-top:14px;font-size:13px;color:var(--accent2);font-weight:600}
+/* schedule table */
+.sched{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.table-box{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{
+text-align:left;padding:13px 18px;background:rgba(255,255,255,.035);
+color:var(--sub);font-size:12.5px;font-weight:600;letter-spacing:.5px;
+border-bottom:1px solid var(--line);white-space:nowrap;
+}
+td{padding:15px 18px;border-bottom:1px solid rgba(42,51,68,.6);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:rgba(255,255,255,.025)}
+.match{font-weight:600}
+.match small{display:block;color:var(--sub);font-size:12px;font-weight:400;margin-top:2px}
+.badge{
+display:inline-block;font-size:11.5px;padding:3px 9px;border-radius:6px;
+background:rgba(61,123,255,.14);color:#7ea6ff;font-weight:600;white-space:nowrap;
+}
+.badge.hot{background:rgba(232,100,28,.16);color:#ff8a4c}
+.badge.done{background:rgba(120,132,150,.16);color:var(--sub)}
+/* feature list */
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.feature ul{list-style:none;display:grid;gap:18px}
+.feature li{display:flex;gap:14px}
+.feature li .dot{
+flex-shrink:0;width:26px;height:26px;border-radius:50%;
+background:rgba(61,123,255,.15);color:#7ea6ff;
+display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;
+}
+.feature li h4{font-size:15px;font-weight:700;margin-bottom:3px}
+.feature li p{font-size:13.8px;color:var(--sub)}
+.panel{
+background:linear-gradient(160deg,rgba(232,100,28,.13),rgba(61,123,255,.10));
+border:1px solid var(--line);border-radius:16px;padding:30px;
+}
+.panel h3{font-size:18px;margin-bottom:12px}
+.panel p{font-size:14px;color:var(--sub);margin-bottom:10px}
+.search-row{display:flex;gap:10px;margin-top:20px}
+.search-row input{
+flex:1;min-width:0;background:rgba(0,0,0,.35);border:1px solid var(--line);
+border-radius:9px;padding:11px 14px;color:var(--txt);font-size:14px;outline:none;
+}
+.search-row input:focus{border-color:var(--accent)}
+.search-row button{
+background:var(--accent);border:none;color:#fff;font-weight:600;font-size:14px;
+padding:0 20px;border-radius:9px;cursor:pointer;
+}
+.search-row button:hover{background:#f5742c}
+#searchTip{font-size:13px;color:var(--accent2);margin-top:10px;min-height:20px}
+/* faq */
+.faq details{
+border:1px solid var(--line);border-radius:12px;background:var(--card);
+padding:0 20px;margin-bottom:12px;
+}
+.faq summary{
+cursor:pointer;padding:17px 0;font-weight:600;font-size:15px;list-style:none;
+display:flex;justify-content:space-between;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:20px;font-weight:400}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding-bottom:18px;color:var(--sub);font-size:14px}
+/* footer */
+footer{background:var(--bg2);border-top:1px solid var(--line);padding:44px 0 30px;margin-top:20px}
+.foot-top{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;margin-bottom:30px}
+.foot-brand{max-width:360px}
+.foot-brand .logo{margin-bottom:14px}
+.foot-brand p{font-size:13.5px;color:var(--sub)}
+.foot-cols{display:flex;gap:56px;flex-wrap:wrap}
+.foot-cols h5{font-size:13px;color:var(--txt);margin-bottom:12px;letter-spacing:.5px}
+.foot-cols a{display:block;font-size:13px;color:var(--sub);margin-bottom:8px}
+.foot-cols a:hover{color:var(--accent2)}
+.foot-bottom{
+border-top:1px solid var(--line);padding-top:20px;
+display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+font-size:12.5px;color:#6c7789;
+}
+@media(max-width:900px){
+.hero-inner{grid-template-columns:1fr;padding:44px 0 40px;gap:30px}
+.hero-visual{order:-1;max-width:230px;margin:0 auto}
+.grid3{grid-template-columns:1fr}
+.grid2{grid-template-columns:1fr}
+.feature{grid-template-columns:1fr;gap:26px}
+.navlinks{display:none}
+.nav{gap:14px}
+.logo{font-size:13.5px}
+.logo svg{width:26px;height:26px}
+.navcta{font-size:13px;padding:7px 14px}
+section{padding:46px 0}
+.table-box{overflow-x:auto}
+table{min-width:560px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+<div class="wrap nav">
+<a class="logo" href="#top" aria-label="nba直播吧在线观看免费观看首页">
+<svg viewBox="0 0 32 32" aria-hidden="true">
+<circle cx="16" cy="16" r="15" fill="#e8641c"/>
+<path d="M16 1v30M1 16h30" stroke="#fff" stroke-width="1.6"/>
+<path d="M5 5c6 5 6 17 0 22M27 5c-6 5-6 17 0 22" stroke="#fff" stroke-width="1.6" fill="none"/>
+</svg>
+<span>nba直播吧在线观看免费观看</span>
+</a>
+<nav class="navlinks" aria-label="主导航">
+<a href="#live">今日直播</a>
+<a href="#schedule">赛程比分</a>
+<a href="#guide">观看方式</a>
+<a href="#faq">常见问题</a>
+</nav>
+<a class="navcta" href="#live">进入直播</a>
+</div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<div class="hero">
+<div class="wrap hero-inner">
+<div>
+<span class="tag"><i></i>NBA 常规赛 · 每日更新直播入口</span>
+<h1>nba直播吧在线观看免费观看</h1>
+<p>把当天的NBA比赛集中在一页：谁在打、几点开球、去哪看，一眼看清。这里汇总常规赛与季后赛的免费在线观看入口，并附上实时比分与球队近况，省去在多个页面之间来回切换的麻烦。</p>
+<div class="hero-btns">
+<a class="btn btn-main" href="#live">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 5v14l11-7z" stroke-linejoin="round"/></svg>
+查看今日直播
+</a>
+<a class="btn btn-ghost" href="#schedule">赛程与比分</a>
+</div>
+</div>
+<div class="hero-visual" aria-hidden="true">
+<svg viewBox="0 0 300 300">
+<defs>
+<radialGradient id="g1" cx="35%" cy="30%" r="80%">
+<stop offset="0%" stop-color="#ff9a4d"/>
+<stop offset="60%" stop-color="#e8641c"/>
+<stop offset="100%" stop-color="#8f2c05"/>
+</radialGradient>
+</defs>
+<circle cx="150" cy="150" r="118" fill="url(#g1)"/>
+<g stroke="#fff" stroke-width="3" fill="none" opacity=".92">
+<circle cx="150" cy="150" r="118"/>
+<path d="M150 32v236M32 150h236"/>
+<path d="M58 58c34 28 34 156 0 184"/>
+<path d="M242 58c-34 28-34 156 0 184"/>
+<path d="M92 42c26 44 26 172 0 216"/>
+<path d="M208 42c-26 44-26 172 0 216"/>
+</g>
+<circle cx="150" cy="150" r="118" stroke="#000" stroke-opacity=".18" stroke-width="6" fill="none"/>
+</svg>
+</div>
+</div>
+</div>
+
+<!-- SCORE STRIP -->
+<div class="strip" aria-label="近期比分速览">
+<div class="wrap strip-in">
+<div class="scorechip">
+<div class="teams"><span>凯尔特人</span><span>112</span></div>
+<div class="teams"><span>尼克斯</span><span>106</span></div>
+<div class="meta"><span>已结束</span><b>全场</b></div>
+</div>
+<div class="scorechip">
+<div class="teams"><span>掘金</span><span>98</span></div>
+<div class="teams"><span>湖人</span><span>101</span></div>
+<div class="meta"><span>已结束</span><b>全场</b></div>
+</div>
+<div class="scorechip">
+<div class="teams"><span>勇士</span><span>—</span></div>
+<div class="teams"><span>太阳</span><span>—</span></div>
+<div class="meta"><span>10:30 开球</span><b>待开始</b></div>
+</div>
+<div class="scorechip">
+<div class="teams"><span>雄鹿</span><span>—</span></div>
+<div class="teams"><span>热火</span><span>—</span></div>
+<div class="meta"><span>09:00 开球</span><b>待开始</b></div>
+</div>
+</div>
+</div>
+
+<!-- 今日直播 -->
+<section id="live">
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-kicker">Live Now</div>
+<h2>今日值得守候的几场球</h2>
+<p>按开球时间先后排列，标注比赛阶段与看点。点开对应入口即可进入 nba直播吧在线观看免费观看 的播放页面，画质与线路以实际页面提供为准。</p>
+</div>
+<div class="grid3">
+<article class="card">
+<div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18" stroke-linecap="round"/></svg></div>
+<h3>东西部强强对话</h3>
+<p>排名靠前的两支球队正面交手，胜负直接影响分区排名。开场阶段通常节奏偏快，适合从第一节就跟进。</p>
+<a class="more" href="#schedule">查看赛程 →</a>
+</article>
+<article class="card">
+<div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg></div>
+<h3>背靠背客场作战</h3>
+<p>连续两天出战的球队体能是变量，轮换阵容往往提前登场。关注替补得分与犯规控制，是判断走势的关键。</p>
+<a class="more" href="#schedule">查看赛程 →</a>
+</article>
+<article class="card">
+<div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke-linecap="round"/></svg></div>
+<h3>年轻球队的成长赛</h3>
+<p>新秀与二年级球员获得大量出场时间，数据起伏大但观赏性强。这类比赛更适合看细节，而非只看比分。</p>
+<a class="more" href="#schedule">查看赛程 →</a>
+</article>
+</div>
+</div>
+</section>
+
+<!-- 赛程表 -->
+<section id="schedule" class="sched">
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-kicker">Schedule</div>
+<h2>赛程与比分一览</h2>
+<p>下面列出近期部分场次的时间、对阵与状态，帮助你在打开 nba直播吧在线观看免费观看 之前先确认哪场还没结束。时间为北京时间，实际以官方公布为准。</p>
+</div>
+<div class="table-box">
+<table>
+<thead>
+<tr><th>时间（北京）</th><th>对阵</th><th>阶段</th><th>状态</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>今日 09:00</td>
+<td class="match">雄鹿 vs 热火<small>东部内战，防守强度较高</small></td>
+<td><span class="badge">常规赛</span></td>
+<td><span class="badge hot">待开始</span></td>
+</tr>
+<tr>
+<td>今日 10:30</td>
+<td class="match">勇士 vs 太阳<small>外线火力对拼，节奏偏快</small></td>
+<td><span class="badge">常规赛</span></td>
+<td><span class="badge hot">待开始</span></td>
+</tr>
+<tr>
+<td>今日 11:00</td>
+<td class="match">凯尔特人 vs 尼克斯<small>东部排名关键战</small></td>
+<td><span class="badge">常规赛</span></td>
+<td><span class="badge done">已结束</span></td>
+</tr>
+<tr>
+<td>明日 08:30</td>
+<td class="match">掘金 vs 湖人<small>内线对抗与挡拆执行</small></td>
+<td><span class="badge">常规赛</span></td>
+<td><span class="badge">未开始</span></td>
+</tr>
+<tr>
+<td>明日 09:00</td>
+<td class="match">独行侠 vs 快船<small>后场组织者的对位</small></td>
+<td><span class="badge">常规赛</span></td>
+<td><span class="badge">未开始</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- 观看方式 -->
+<section id="guide">
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-kicker">How to Watch</div>
+<h2>怎样顺畅看完一整场</h2>
+<p>免费在线观看的核心是稳定与清晰，而不是线路数量。下面几点是长期看球时最常被忽略、也最影响体验的细节。</p>
+</div>
+<div class="feature">
+<div>
+<ul>
+<li>
+<span class="dot">1</span>
+<div>
+<h4>开赛前十分钟进场</h4>
+<p>提前打开页面可以避开开场瞬间的集中访问，缓冲更从容，也不会错过跳球。</p>
+</div>
+</li>
+<li>
+<span class="dot">2</span>
+<div>
+<h4>优先选择有线网络</h4>
+<p>篮球直播码率较高，Wi-Fi 信号弱时容易掉帧。用网线或靠近路由器能明显改善。</p>
+</div>
+</li>
+<li>
+<span class="dot">3</span>
+<div>
+<h4>留意线路切换</h4>
+<p>同一场比赛可能提供多条线路，若当前画面卡顿，切换线路通常比刷新更有效。</p>
+</div>
+</li>
+<li>
+<span class="dot">4</span>
+<div>
+<h4>比分与画面分开看</h4>
+<p>直播画面存在延迟，需要准确比分时以文字比分为准，避免误判比赛走势。</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="panel">
+<h3>按球队快速找比赛</h3>
+<p>输入球队名称或所在城市，可以快速定位到对应的场次信息。搜索仅针对本页已列出的赛程，用于确认时间与状态。</p>
+<div class="search-row">
+<input id="teamInput" type="text" placeholder="例如：湖人、勇士、凯尔特人" aria-label="输入球队名称">
+<button type="button" id="searchBtn">查找</button>
+</div>
+<p id="searchTip" role="status" aria-live="polite"></p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-kicker">FAQ</div>
+<h2>看球前常问的几个问题</h2>
+<p>关于 nba直播吧在线观看免费观看 的使用方式，集中回答访问中最常见的疑问。</p>
+</div>
+<div class="faq">
+<details open>
+<summary>观看需要注册账号吗？</summary>
+<p>页面提供的入口以直接观看为主，通常不强制注册。若某条线路要求登录，可先尝试切换其他线路。</p>
+</details>
+<details>
+<summary>比赛时间为什么和官方有些出入？</summary>
+<p>本页时间统一换算为北京时间，官方赛程可能因转播安排临时调整。开赛前建议再确认一次具体场次。</p>
+</details>
+<details>
+<summary>手机上能正常观看吗？</summary>
+<p>页面采用自适应布局，手机浏览器可直接打开。观看时建议横屏并保持网络稳定，以获得更好的画面比例。</p>
+</details>
+<details>
+<summary>错过了直播怎么办？</summary>
+<p>直播结束后，赛程表中的状态会标记为已结束，比分同步更新。回放内容以对应页面实际提供为准。</p>
+</details>
+</div>
+</div>
+</section>
+
+<!-- 收束 -->
+<section style="padding-top:0">
+<div class="wrap">
+<div class="panel" style="text-align:center;padding:44px 26px">
+<h3 style="font-size:20px">下一场球，不用再找入口</h3>
+<p style="max-width:560px;margin:10px auto 0">把 nba直播吧在线观看免费观看 加入书签，比赛日打开就能看到当日对阵、开球时间与免费在线观看入口，看完比分再看赛程，一整晚的安排都在这一页。</p>
+<div class="hero-btns" style="justify-content:center">
+<a class="btn btn-main" href="#live">回到今日直播</a>
+<a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none;opacity:.55">下载</a>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+<div class="foot-top">
+<div class="foot-brand">
+<a class="logo" href="#top">
+<svg viewBox="0 0 32 32" aria-hidden="true">
+<circle cx="16" cy="16" r="15" fill="#e8641c"/>
+<path d="M16 1v30M1 16h30" stroke="#fff" stroke-width="1.6"/>
+<path d="M5 5c6 5 6 17 0 22M27 5c-6 5-6 17 0 22" stroke="#fff" stroke-width="1.6" fill="none"/>
+</svg>
+<span>nba直播吧在线观看免费观看</span>
+</a>
+<p>汇集NBA赛程、比分与免费在线观看入口的球迷首页，帮助你在比赛日快速找到想看的那一场。</p>
+</div>
+<div class="foot-cols">
+<div>
+<h5>内容</h5>
+<a href="#live">今日直播</a>
+<a href="#schedule">赛程比分</a>
+<a href="#guide">观看方式</a>
+</div>
+<div>
+<h5>支持</h5>
+<a href="#faq">常见问题</a>
+<a href="#top">返回顶部</a>
+</div>
+</div>
+</div>
+<div class="foot-bottom">
+<span>© 2024 nba直播吧在线观看免费观看 · 内容仅供参考，赛程以官方公布为准</span>
+<span>本站不存储任何视频文件</span>
+</div>
+</div>
+</footer>
+
+<script>
+(function(){
+var teams=["雄鹿","热火","勇士","太阳","凯尔特人","尼克斯","掘金","湖人","独行侠","快船"];
+var input=document.getElementById('teamInput');
+var btn=document.getElementById('searchBtn');
+var tip=document.getElementById('searchTip');
+function run(){
+var v=(input.value||'').trim();
+if(!v){tip.textContent='请输入球队名称后再查找。';return;}
+var hit=teams.filter(function(t){return t.indexOf(v)>-1||v.indexOf(t)>-1;});
+if(hit.length){
+tip.textContent='已找到：'+hit.join('、')+' —— 请在下方赛程表中查看对应时间与状态。';
+} else {
+tip.textContent='本页暂未列出「'+v+'」的场次，可稍后刷新查看更新。';
+}
+}
+btn.addEventListener('click',run);
+input.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
+})();
+</script>
+</body>
+</html>
