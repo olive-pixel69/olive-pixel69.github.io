@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>樱花动漫下载-樱花动漫客户端下载_樱花动漫APP下载安装</title>
+<meta name="description" content="樱花动漫下载页面，介绍樱花动漫客户端的功能特点、安装方式与常见使用问题，帮助动漫爱好者找到适合自己的樱花动漫下载途径，随时追番。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23fbd0e4'/%3E%3Cpath d='M32 14c3 9-3 12-8 13 8 1 12 7 8 23 9-6 12-14 12-21 0-7-5-13-12-15z' fill='%23d63a72'/%3E%3Cpath d='M32 14c-7 2-12 8-12 15 0 4 1 7 3 10-1-8 3-12 9-13-5-1-3-3 0-12z' fill='%23f08ab0'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --pink:#e34f86;
+    --pink-deep:#b62b61;
+    --pink-soft:#fde8f0;
+    --ink:#2a222a;
+    --ink-soft:#5c5158;
+    --line:#f2d6e2;
+    --bg:#fffafc;
+    --card:#ffffff;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--pink-deep);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img,svg{display:block;}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,250,252,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;height:68px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:800;color:var(--ink);letter-spacing:.5px;}
+  .logo:hover{text-decoration:none;}
+  .logo svg{flex:0 0 auto;}
+  nav.main-nav{display:flex;align-items:center;gap:22px;font-size:15px;}
+  nav.main-nav a{color:var(--ink-soft);font-weight:500;padding:4px 0;border-bottom:2px solid transparent;}
+  nav.main-nav a:hover{color:var(--pink-deep);border-bottom-color:var(--pink);text-decoration:none;}
+  .nav-cta{
+    background:var(--pink);color:#fff !important;font-weight:700;
+    padding:8px 18px;border-radius:999px;font-size:14px;
+    border-bottom:none !important;
+  }
+  .nav-cta:hover{background:var(--pink-deep);}
+
+  .menu-toggle{
+    display:none;background:var(--pink-soft);border:1px solid var(--line);
+    border-radius:10px;padding:7px 10px;cursor:pointer;
+  }
+  .menu-toggle svg{width:22px;height:22px;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(900px 380px at 88% -12%, #ffe1ee 0%, rgba(255,225,238,0) 62%),
+      radial-gradient(700px 340px at -8% 108%, #fff0e4 0%, rgba(255,240,228,0) 60%),
+      linear-gradient(180deg,#fff6fa 0%,#fffafc 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-inner{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;
+    padding:56px 0 60px;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#fff;border:1px solid var(--line);color:var(--pink-deep);
+    font-size:13px;font-weight:700;padding:5px 14px;border-radius:999px;
+    margin-bottom:18px;
+  }
+  .eyebrow svg{width:15px;height:15px;}
+  h1{
+    font-size:clamp(30px,4.4vw,46px);
+    line-height:1.28;font-weight:900;letter-spacing:.5px;
+    color:var(--ink);
+  }
+  h1 .mark{color:var(--pink-deep);}
+  .hero-sub{
+    margin-top:18px;font-size:16px;color:var(--ink-soft);max-width:34em;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:15px;font-weight:700;padding:13px 26px;border-radius:999px;
+    transition:.18s ease;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--pink);color:#fff;box-shadow:0 10px 22px -10px rgba(227,79,134,.85);}
+  .btn-primary:hover{background:var(--pink-deep);text-decoration:none;}
+  .btn-ghost{background:#fff;color:var(--pink-deep);border-color:var(--line);}
+  .btn-ghost:hover{background:var(--pink-soft);text-decoration:none;}
+  .btn svg{width:17px;height:17px;}
+  .hero-facts{
+    display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:26px;
+    font-size:13.5px;color:var(--ink-soft);
+  }
+  .hero-facts span{display:inline-flex;align-items:center;gap:7px;}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--pink);display:inline-block;}
+
+  .hero-art{
+    position:relative;background:#fff;border:1px solid var(--line);
+    border-radius:24px;padding:22px;box-shadow:0 26px 50px -34px rgba(182,43,97,.55);
+  }
+  .hero-art svg{width:100%;height:auto;}
+  .art-cap{
+    margin-top:14px;font-size:13px;color:var(--ink-soft);display:flex;align-items:center;gap:8px;
+  }
+
+  /* ---------- section base ---------- */
+  section{padding:64px 0;}
+  section + section{padding-top:0;}
+  .sec-head{max-width:40em;margin-bottom:32px;}
+  .sec-tag{
+    font-size:13px;font-weight:800;letter-spacing:2px;color:var(--pink);
+    text-transform:uppercase;margin-bottom:10px;
+  }
+  h2{font-size:clamp(22px,2.7vw,29px);font-weight:800;line-height:1.35;color:var(--ink);}
+  .sec-desc{margin-top:12px;color:var(--ink-soft);font-size:15.5px;}
+
+  /* ---------- feature cards ---------- */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px;transition:.2s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 18px 34px -26px rgba(182,43,97,.65);}
+  .card-ico{
+    width:46px;height:46px;border-radius:13px;background:var(--pink-soft);
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+  }
+  .card-ico svg{width:24px;height:24px;}
+  .card h3{font-size:17px;font-weight:800;margin-bottom:8px;}
+  .card p{font-size:14.5px;color:var(--ink-soft);}
+
+  /* ---------- download panel ---------- */
+  .dl-panel{
+    background:linear-gradient(150deg,#fff 0%,#fff4f8 100%);
+    border:1px solid var(--line);border-radius:22px;
+    padding:38px 36px;display:grid;grid-template-columns:1.3fr .7fr;gap:34px;align-items:center;
+  }
+  .dl-panel h2{margin-bottom:12px;}
+  .dl-panel p{color:var(--ink-soft);font-size:15.5px;}
+  .dl-list{list-style:none;margin:20px 0 26px;display:grid;gap:10px;}
+  .dl-list li{display:flex;gap:10px;font-size:14.5px;color:var(--ink-soft);}
+  .dl-list svg{width:17px;height:17px;flex:0 0 auto;margin-top:4px;}
+  .dl-box{
+    background:#fff;border:1px dashed var(--pink);border-radius:18px;
+    padding:26px 22px;text-align:center;
+  }
+  .dl-box .ver{font-size:13px;color:var(--pink-deep);font-weight:700;letter-spacing:1px;}
+  .dl-box .size{font-size:13px;color:var(--ink-soft);margin-top:6px;}
+  .dl-box .btn{margin-top:18px;width:100%;justify-content:center;pointer-events:none;opacity:.85;}
+  .dl-note{font-size:12.5px;color:#9a8d95;margin-top:12px;line-height:1.6;}
+
+  /* ---------- steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step;}
+  .step{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px 24px;position:relative;
+  }
+  .step::before{
+    counter-increment:step;content:"0" counter(step);
+    font-size:13px;font-weight:900;color:var(--pink);letter-spacing:1px;
+  }
+  .step h3{font-size:16.5px;font-weight:800;margin:8px 0 8px;}
+  .step p{font-size:14.5px;color:var(--ink-soft);}
+
+  /* ---------- faq ---------- */
+  .faq{display:grid;gap:14px;}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:18px 22px;
+  }
+  details[open]{background:#fffafc;border-color:#f0bfd4;}
+  summary{
+    font-weight:700;font-size:15.5px;cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";font-size:20px;font-weight:700;color:var(--pink);line-height:1;
+  }
+  details[open] summary::after{content:"–";}
+  details p{margin-top:12px;font-size:14.5px;color:var(--ink-soft);}
+
+  /* ---------- article / notes ---------- */
+  .note-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;}
+  .note h3{font-size:17px;font-weight:800;margin-bottom:10px;}
+  .note p{font-size:15px;color:var(--ink-soft);margin-bottom:12px;}
+  .note p:last-child{margin-bottom:0;}
+  .quote{
+    border-left:3px solid var(--pink);background:var(--pink-soft);
+    padding:16px 20px;border-radius:0 12px 12px 0;font-size:14.5px;color:var(--ink-soft);
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:1px solid var(--line);background:#fff6fa;
+    padding:44px 0 34px;margin-top:20px;
+  }
+  .foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .foot-brand{max-width:26em;}
+  .foot-brand .logo{font-size:17px;margin-bottom:12px;}
+  .foot-brand p{font-size:13.5px;color:var(--ink-soft);}
+  .foot-links{display:flex;gap:56px;flex-wrap:wrap;}
+  .foot-col h4{font-size:14px;font-weight:800;margin-bottom:12px;}
+  .foot-col a{display:block;font-size:13.5px;color:var(--ink-soft);margin-bottom:8px;}
+  .foot-col a:hover{color:var(--pink-deep);}
+  .foot-bottom{
+    margin-top:32px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:12.5px;color:#9a8d95;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:32px;padding:40px 0 44px;}
+    .hero-art{order:2;max-width:520px;}
+    .grid-3,.steps{grid-template-columns:1fr 1fr;}
+    .dl-panel{grid-template-columns:1fr;padding:30px 24px;}
+    .note-grid{grid-template-columns:1fr;gap:26px;}
+  }
+  @media (max-width:720px){
+    nav.main-nav{
+      display:none;position:absolute;top:68px;left:0;right:0;
+      flex-direction:column;align-items:stretch;gap:0;
+      background:#fff;border-bottom:1px solid var(--line);
+      padding:10px 20px 18px;box-shadow:0 18px 30px -24px rgba(182,43,97,.6);
+    }
+    nav.main-nav.open{display:flex;}
+    nav.main-nav a{padding:12px 0;border-bottom:1px solid var(--line);}
+    nav.main-nav a:last-child{border-bottom:none;}
+    .nav-cta{text-align:center;margin-top:10px;}
+    .menu-toggle{display:inline-flex;}
+    .grid-3,.steps{grid-template-columns:1fr;}
+    section{padding:46px 0;}
+    .foot-links{gap:32px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="樱花动漫下载首页">
+      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#fbd0e4"/>
+        <path d="M32 14c3 9-3 12-8 13 8 1 12 7 8 23 9-6 12-14 12-21 0-7-5-13-12-15z" fill="#d63a72"/>
+        <path d="M32 14c-7 2-12 8-12 15 0 4 1 7 3 10-1-8 3-12 9-13-5-1-3-3 0-12z" fill="#f08ab0"/>
+      </svg>
+      樱花动漫下载
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="展开导航" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#b62b61" stroke-width="2" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="主导航">
+      <a href="#features">客户端特点</a>
+      <a href="#download">下载安装</a>
+      <a href="#steps">使用步骤</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-cta" href="#download">开始下载</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- hero -->
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#b62b61" stroke-width="2" stroke-linecap="round">
+            <path d="M12 3v12M7 10l5 5 5-5M4 19h16"/>
+          </svg>
+          追番客户端 · 桌面与手机
+        </span>
+        <h1>樱花动漫下载</h1>
+        <p class="hero-sub">
+          想随时追番，又不想每次打开浏览器翻收藏夹？樱花动漫下载把番剧浏览、更新提醒和观看入口收进一个客户端里。这里说明客户端能做什么、怎么装、装好后怎么用，帮你在动手之前先把事情弄清楚。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+              <path d="M12 3v12M7 10l5 5 5-5M4 19h16"/>
+            </svg>
+            前往下载区
+          </a>
+          <a class="btn btn-ghost" href="#features">看看有哪些功能</a>
+        </div>
+        <div class="hero-facts">
+          <span><i class="dot"></i>番剧分类浏览</span>
+          <span><i class="dot"></i>更新提醒</span>
+          <span><i class="dot"></i>观看记录同步</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 360 260" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffe3ee"/>
+              <stop offset="1" stop-color="#fff6ea"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="360" height="260" rx="18" fill="url(#g1)"/>
+          <rect x="34" y="40" width="180" height="120" rx="12" fill="#ffffff" stroke="#f2d6e2"/>
+          <rect x="50" y="56" width="148" height="66" rx="8" fill="#fde8f0"/>
+          <circle cx="124" cy="89" r="19" fill="#e34f86" opacity=".9"/>
+          <path d="M119 81l14 8-14 8z" fill="#fff"/>
+          <rect x="50" y="132" width="90" height="8" rx="4" fill="#f6c9dc"/>
+          <rect x="50" y="146" width="56" height="8" rx="4" fill="#f9dbe7"/>
+          <rect x="236" y="76" width="92" height="150" rx="14" fill="#ffffff" stroke="#f2d6e2"/>
+          <rect x="250" y="92" width="64" height="40" rx="8" fill="#fde8f0"/>
+          <path d="M262 112l10-14 10 14z" fill="#e34f86" opacity=".85"/>
+          <rect x="250" y="142" width="64" height="7" rx="3.5" fill="#f6c9dc"/>
+          <rect x="250" y="156" width="44" height="7" rx="3.5" fill="#f9dbe7"/>
+          <rect x="250" y="176" width="64" height="30" rx="9" fill="#e34f86"/>
+          <path d="M275 186v10M270 191h10" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="52" cy="212" r="12" fill="#fbd0e4"/>
+          <circle cx="82" cy="212" r="12" fill="#ffe8cf"/>
+          <circle cx="112" cy="212" r="12" fill="#fde8f0"/>
+        </svg>
+        <div class="art-cap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e34f86" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/>
+          </svg>
+          桌面与移动端界面示意
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- features -->
+  <section id="features">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Features</div>
+        <h2>樱花动漫下载后，能解决哪些追番麻烦</h2>
+        <p class="sec-desc">很多人搜樱花动漫下载，是想把零散的观看动作集中起来。下面三块是客户端最常被用到的部分，也是决定要不要装的关键。</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#b62b61" stroke-width="2" stroke-linecap="round">
+              <rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/>
+            </svg>
+          </div>
+          <h3>番剧集中浏览</h3>
+          <p>把不同季度、不同题材的番剧放在同一处列表里，按类型和更新时间翻找，比在浏览器里反复开标签页更省事。</p>
+        </div>
+        <div class="card">
+          <div class="card-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#b62b61" stroke-width="2" stroke-linecap="round">
+              <path d="M18 8a6 6 0 10-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 01-3.4 0"/>
+            </svg>
+          </div>
+          <h3>更新有提醒</h3>
+          <p>关注的番剧更新后给出提示，不必每天手动刷新页面确认。对于周更番来说，这个功能省下的时间很可观。</p>
+        </div>
+        <div class="card">
+          <div class="card-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#b62b61" stroke-width="2" stroke-linecap="round">
+              <path d="M4 6h7v13H4zM13 6h7v13h-7z"/><path d="M11 12h2"/>
+            </svg>
+          </div>
+          <h3>记录接着看</h3>
+          <p>看到第几集、看到哪个位置，客户端会留下记录。换设备打开时，从上次停下的地方继续，不用凭记忆往回找。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- download -->
+  <section id="download">
+    <div class="wrap">
+      <div class="dl-panel">
+        <div>
+          <div class="sec-tag">Download</div>
+          <h2>樱花动漫下载入口与版本说明</h2>
+          <p>下载前建议先确认三件事：系统版本是否匹配、安装包来源是否可靠、以及是否需要保留旧版本的观看记录。樱花动漫下载的安装包按桌面端与移动端分别提供，选择与自己设备对应的一项即可。</p>
+          <ul class="dl-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#e34f86" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>
+              桌面端适合大屏追番，播放窗口与弹幕区域更宽裕
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#e34f86" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>
+              移动端适合通勤与碎片时间，支持后台继续播放
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#e34f86" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>
+              同一账号登录后，观看记录可在两端之间同步
+            </li>
+          </ul>
+          <p style="font-size:13.5px;color:#9a8d95;">提示：安装包体积与系统要求会随版本调整，以下载区展示的实际信息为准。</p>
+        </div>
+
+        <div class="dl-box">
+          <div class="ver">客户端安装包</div>
+          <div class="size">桌面端 / 移动端可选</div>
+          <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+              <path d="M12 3v12M7 10l5 5 5-5M4 19h16"/>
+            </svg>
+            下载
+          </a>
+          <p class="dl-note">下载地址正在接入，按钮暂不可用。请稍后回到本页获取最新安装包。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- steps -->
+  <section id="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">How to</div>
+        <h2>樱花动漫下载到手后，三步就能开始看</h2>
+        <p class="sec-desc">从拿到安装包到正常追番，中间只有很少几步。按顺序做完，后面基本就是打开即用的状态。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>选择对应版本</h3>
+          <p>先看自己的设备是电脑还是手机，再确认系统版本。选错端会导致安装失败或界面显示不完整，返工反而更花时间。</p>
+        </div>
+        <div class="step">
+          <h3>完成安装与登录</h3>
+          <p>安装过程按提示走即可。首次打开时建议先登录账号，这样观看记录和关注的番剧才能跟着账号走，不会散落在各台设备上。</p>
+        </div>
+        <div class="step">
+          <h3>设置更新提醒</h3>
+          <p>在番剧详情页把想追的加入关注，再检查一遍通知权限是否开启。少了这一步，更新提醒可能被系统静默拦掉。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- faq -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">FAQ</div>
+        <h2>关于樱花动漫下载的常见疑问</h2>
+        <p class="sec-desc">这几个问题在搜索樱花动漫下载时被问得最多，答案按实际使用顺序排列。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>樱花动漫下载必须登录才能用吗？</summary>
+          <p>浏览番剧列表通常不需要登录，但观看记录同步、关注番剧的更新提醒这些功能依赖账号。如果你只在固定一台设备上看，不登录也能用；如果会在电脑和手机之间切换，登录会更省心。</p>
+        </details>
+        <details>
+          <summary>下载后提示版本不兼容怎么办？</summary>
+          <p>先核对系统版本是否达到安装包要求，再确认安装包来源与设备架构是否匹配。两者都正确仍报错时，尝试清理旧版本残留后重装，通常能解决大部分兼容提示。</p>
+        </details>
+        <details>
+          <summary>更换设备后观看记录还在吗？</summary>
+          <p>只要新设备登录的是同一个账号，观看记录会随账号同步过来。未登录状态下产生的记录只保存在本机，卸载或换机后一般无法找回，这也是建议首次打开就登录的原因。</p>
+        </details>
+        <details>
+          <summary>为什么没有收到更新提醒？</summary>
+          <p>常见原因是系统通知权限未开启，或客户端被后台限制。到系统设置里放开通知权限，并把客户端加入后台运行白名单，提醒基本就能恢复正常。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- notes -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Notes</div>
+        <h2>把樱花动漫下载用在合适的场景里</h2>
+      </div>
+      <div class="note-grid">
+        <div class="note">
+          <h3>追周更番：让提醒替你记时间</h3>
+          <p>周更番的更新时间分散在一周的不同日子，靠脑子记很容易漏。把在追的番剧加入关注，更新提醒会按播出节奏推送，你只需要在有空的时候点开看即可。</p>
+          <p>需要注意的是，提醒的及时性受系统通知策略影响。若发现某部番迟迟没有提示，先排查通知权限，再确认该番是否仍在更新列表中。</p>
+        </div>
+        <div class="note">
+          <h3>补旧番：用分类和记录减少翻找</h3>
+          <p>补旧番时最耗时的往往不是看，而是找。按题材和年份筛选列表，比一页页翻更高效；看到一半中断时，观看记录会保留进度，下次打开直接续播。</p>
+          <p>如果你习惯在多个设备之间切换，登录账号后记录会随账号走。这也是樱花动漫下载在长期使用中比较实用的一点，不必为换设备重新定位集数。</p>
+          <p class="quote">小建议：安装完成后先花几分钟整理关注列表，后续的更新提醒和观看记录都会围绕这份列表运转，越早整理越省事。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logo">
+          <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#fbd0e4"/>
+            <path d="M32 14c3 9-3 12-8 13 8 1 12 7 8 23 9-6 12-14 12-21 0-7-5-13-12-15z" fill="#d63a72"/>
+            <path d="M32 14c-7 2-12 8-12 15 0 4 1 7 3 10-1-8 3-12 9-13-5-1-3-3 0-12z" fill="#f08ab0"/>
+          </svg>
+          樱花动漫下载
+        </div>
+        <p>围绕樱花动漫下载的客户端说明页，介绍功能、安装方式与使用中的常见问题，帮助动漫爱好者把追番这件事安排得更顺。</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>页面导航</h4>
+          <a href="#features">客户端特点</a>
+          <a href="#download">下载安装</a>
+          <a href="#steps">使用步骤</a>
+          <a href="#faq">常见问题</a>
+        </div>
+        <div class="foot-col">
+          <h4>使用提示</h4>
+          <a href="#download">安装包版本选择</a>
+          <a href="#steps">观看记录同步</a>
+          <a href="#faq">通知权限设置</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>樱花动漫下载 · 追番客户端说明</span>
+      <span>页面内容随版本调整，请以实际下载区信息为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('mainNav');
+    if(!toggle || !nav) return;
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 720){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  })();
+</script>
+
+</body>
+              </html>
